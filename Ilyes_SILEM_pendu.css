@@ -1,0 +1,195 @@
+/* Style pour les div contenant les lettres devinées */
+body {
+    background: linear-gradient(45deg, #49a09d, #352c82);
+    }
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+h1
+{
+  font-size: 40px;
+  line-height: 80px;
+  font-family:"Segoe print", Arial, Helvetica, sans-serif;
+  color: #040200; 
+  padding:20px;
+  font-weight:lighter; 
+  text-align:center;
+  display:inline;
+  font-weight: bold;
+}
+
+
+#fenetre_resltat{
+    display: flex;
+    margin-top: 14px;
+}
+
+/* Style pour les cases contenant les lettres devinées */
+#main div div {
+    display: inline-block;
+    margin: 5px;
+    font-size: 1.5em;
+}
+
+
+
+input {
+    margin-left: 5px;
+}
+
+/* Style pour les div de message */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* ******************************************/
+#cases_lettres {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.case_lettre {
+    /*border: 1px solid #413939;*/
+    background: linear-gradient(to right, #f0f0f0, #e0e0e0, #d0d0d0, #c0c0c0);    
+    border-radius: 30%;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    line-height: 45px; 
+    box-shadow: 5px 15px 10px rgba(0, 0, 0, 0.5); 
+     
+}
+
+
+#cases_alphabet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 5px;
+}
+
+
+
+.lettre_alphabet{
+    border: 2px solid #000000;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #413939;
+    border-radius: 25%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.vibration {
+    animation: vibration 0.3s ease;
+}
+@keyframes vibration {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(2px, -2px); }
+    50% { transform: translate(-2px, 2px); }
+    75% { transform: translate(2px, -2px); }
+    100% { transform: translate(0, 0); }
+}
+
+
+
+table {
+	background: linear-gradient(45deg, #49a09d, #5f2c82);
+	font-family: sans-serif;
+	font-weight: 100;
+    width: 50%;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-collapse: collapse;
+    margin-top: 80px;
+}
+
+
+th {
+	padding: 15px;
+	background-color: rgba(53, 2, 2, 0.2);
+	color: #fff;
+}
+
+td {
+	padding: 15px;
+	color: #fff;
+}
+
+
+
+
+.bn {   
+    margin-top: 15px; 
+    margin-bottom: 10px;        
+    border: none;
+    padding: 0.8em 2.5em;
+    outline: none;
+    color: white;
+    font-style: 1.2em;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    background: none;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.45);
+}
+.bn:before,
+.bn:after {
+position: absolute;
+top: 50%;
+left: 50%;
+border-radius: 10em;
+-webkit-transform: translateX(-50%) translateY(-50%);
+transform: translateX(-50%) translateY(-50%);
+width: 105%;
+height: 105%;
+content: "";
+z-index: -2;
+background-size: 400% 400%;
+background: linear-gradient(
+    60deg,
+    #5a33f7,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+);
+}
+
+.bn:before {
+-webkit-filter: blur(7px);
+filter: blur(7px);
+-webkit-transition: all 0.25s ease;
+transition: all 0.25s ease;
+-webkit-animation: pulse 10s infinite ease;
+animation: pulse 10s infinite ease;
+}
+
+.bn:after {
+-webkit-filter: blur(0.3px);
+filter: blur(0.3px);
+}
+
+.bn:hover:before {
+width: 115%;
+height: 115%;
+}
+
+#id_divChampSaisie, #id_message, #id_div_resultat{
+    margin-top: 20px;
+    margin-left: 50px;
+    /*border: 3px solid #73AD21;*/
+}
